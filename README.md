@@ -2,7 +2,7 @@
 
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://en.wikipedia.org/wiki/MIT_License)
-[![Build Status](https://travis-ci.org/genedelisa/TableBinding.svg)](https://travis-ci.org/genedelisa/TableBinding)
+[![Build Status](https://travis-ci.org/genedelisa/MIDIEndPoints.svg)](https://travis-ci.org/genedelisa/MIDIEndPoints)
 [![GitHub tag](https://img.shields.io/github/tag/genedelisa/MIDIEndPoints.svg)](https://github.com/genedelisa/MIDIEndPoints/)
 [![GitHub release](https://img.shields.io/github/release/genedelisa/MIDIEndPoints.svg)](https://github.com/genedelisa/MIDIEndPoints/)
 
