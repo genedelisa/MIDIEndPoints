@@ -1,0 +1,22 @@
+# file: .travis.yml
+language: objective-c
+osx_image: xcode6.4
+xcode_project: MIDIEndPoints.xcodeproj
+xcode_scheme: MIDIEndPoints
+
+before_install:
+- brew update
+- brew outdated xctool || brew upgrade xctool
+- gem install xcpretty -N
+
+script:
+
+# - xctool -project MIDIEndPoints.xcodeproj -scheme "MIDIEndPoints" test | xcpretty -c
+
+
+- xctool -project MIDIEndPoints.xcodeproj -scheme "MIDIEndPoints" -sdk macosx10.10 -configuration Debug -destination "platform=OS X" -PBXBuildsContinueAfterErrors=0 test | xcpretty -c
+
+
+# http://docs.travis-ci.com/user/languages/objective-c/
+
+

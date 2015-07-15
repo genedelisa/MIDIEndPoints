@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B04DC88E1B570C5D00B47DD8 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = B04DC88B1B570C5D00B47DD8 /* README.md */; };
+		B04DC88F1B570C5D00B47DD8 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = B04DC88C1B570C5D00B47DD8 /* Credits.html */; };
+		B04DC8901B570C5D00B47DD8 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B04DC88D1B570C5D00B47DD8 /* LICENSE */; };
+		B04DC8921B570DC700B47DD8 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = B04DC8911B570DC700B47DD8 /* .travis.yml */; };
+		B04DC8941B570E6100B47DD8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B04DC8931B570E6100B47DD8 /* .gitignore */; };
 		B0A0D1481B559851006FFCA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0D1471B559851006FFCA1 /* AppDelegate.swift */; };
-		B0A0D14A1B559851006FFCA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0D1491B559851006FFCA1 /* ViewController.swift */; };
 		B0A0D14C1B559851006FFCA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0A0D14B1B559851006FFCA1 /* Assets.xcassets */; };
 		B0A0D14F1B559851006FFCA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0A0D14D1B559851006FFCA1 /* Main.storyboard */; };
 		B0A0D15A1B559851006FFCA1 /* MIDIEndPointsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0D1591B559851006FFCA1 /* MIDIEndPointsTests.swift */; };
+		B0A0D1651B559E38006FFCA1 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0D1641B559E38006FFCA1 /* OtherViewController.swift */; };
+		B0A0D1671B559F0D006FFCA1 /* MIDIEndpointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0D1661B559F0D006FFCA1 /* MIDIEndpointViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,15 +31,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B04DC88B1B570C5D00B47DD8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B04DC88C1B570C5D00B47DD8 /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
+		B04DC88D1B570C5D00B47DD8 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		B04DC8911B570DC700B47DD8 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		B04DC8931B570E6100B47DD8 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B0A0D1441B559851006FFCA1 /* MIDIEndPoints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIDIEndPoints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A0D1471B559851006FFCA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B0A0D1491B559851006FFCA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B0A0D14B1B559851006FFCA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0A0D14E1B559851006FFCA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B0A0D1501B559851006FFCA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0A0D1551B559851006FFCA1 /* MIDIEndPointsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MIDIEndPointsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A0D1591B559851006FFCA1 /* MIDIEndPointsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIEndPointsTests.swift; sourceTree = "<group>"; };
 		B0A0D15B1B559851006FFCA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0A0D1641B559E38006FFCA1 /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
+		B0A0D1661B559F0D006FFCA1 /* MIDIEndpointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIDIEndpointViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +69,11 @@
 		B0A0D13B1B559851006FFCA1 = {
 			isa = PBXGroup;
 			children = (
+				B04DC8931B570E6100B47DD8 /* .gitignore */,
+				B04DC8911B570DC700B47DD8 /* .travis.yml */,
+				B04DC88B1B570C5D00B47DD8 /* README.md */,
+				B04DC88C1B570C5D00B47DD8 /* Credits.html */,
+				B04DC88D1B570C5D00B47DD8 /* LICENSE */,
 				B0A0D1461B559851006FFCA1 /* MIDIEndPoints */,
 				B0A0D1581B559851006FFCA1 /* MIDIEndPointsTests */,
 				B0A0D1451B559851006FFCA1 /* Products */,
@@ -76,10 +93,11 @@
 			isa = PBXGroup;
 			children = (
 				B0A0D1471B559851006FFCA1 /* AppDelegate.swift */,
-				B0A0D1491B559851006FFCA1 /* ViewController.swift */,
+				B0A0D1661B559F0D006FFCA1 /* MIDIEndpointViewController.swift */,
 				B0A0D14B1B559851006FFCA1 /* Assets.xcassets */,
 				B0A0D14D1B559851006FFCA1 /* Main.storyboard */,
 				B0A0D1501B559851006FFCA1 /* Info.plist */,
+				B0A0D1641B559E38006FFCA1 /* OtherViewController.swift */,
 			);
 			path = MIDIEndPoints;
 			sourceTree = "<group>";
@@ -173,7 +191,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B04DC8921B570DC700B47DD8 /* .travis.yml in Resources */,
 				B0A0D14C1B559851006FFCA1 /* Assets.xcassets in Resources */,
+				B04DC88F1B570C5D00B47DD8 /* Credits.html in Resources */,
+				B04DC8901B570C5D00B47DD8 /* LICENSE in Resources */,
+				B04DC8941B570E6100B47DD8 /* .gitignore in Resources */,
 				B0A0D14F1B559851006FFCA1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,7 +214,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0A0D14A1B559851006FFCA1 /* ViewController.swift in Sources */,
+				B0A0D1671B559F0D006FFCA1 /* MIDIEndpointViewController.swift in Sources */,
+				B0A0D1651B559E38006FFCA1 /* OtherViewController.swift in Sources */,
+				B04DC88E1B570C5D00B47DD8 /* README.md in Sources */,
 				B0A0D1481B559851006FFCA1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +400,7 @@
 				B0A0D1601B559851006FFCA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0A0D1611B559851006FFCA1 /* Build configuration list for PBXNativeTarget "MIDIEndPointsTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +409,7 @@
 				B0A0D1631B559851006FFCA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
