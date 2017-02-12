@@ -74,7 +74,7 @@ class MIDIEndpointViewController: NSViewController {
 
     }
 
-    override var representedObject: AnyObject? {
+    override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
         }
@@ -111,7 +111,7 @@ class MIDIEndpointViewController: NSViewController {
     }
 
     
-    func getDisplayName(midiEndPoint:MIDIEndpointRef) -> String? {
+    func getDisplayName(_ midiEndPoint:MIDIEndpointRef) -> String? {
         var property : Unmanaged<CFString>?
         let err = MIDIObjectGetStringProperty(midiEndPoint, kMIDIPropertyDisplayName, &property)
         if err == noErr {
@@ -126,13 +126,13 @@ class MIDIEndpointViewController: NSViewController {
 
 
 extension MIDIEndpointViewController: NSOutlineViewDelegate {
-    func outlineView(outlineView: NSOutlineView, viewForTableColumn: NSTableColumn?, item: AnyObject) -> NSView? {
+    func outlineView(_ outlineView: NSOutlineView, viewFor viewForTableColumn: NSTableColumn?, item: Any) -> NSView? {
         print("viewForTableColumn \(item)")
 
         switch item {
         case let ms as MIDISource:
             print("viewForTableColumn endpoint \(ms)")
-            let view = outlineView.makeViewWithIdentifier("DataCell", owner: self) as! NSTableCellView
+            let view = outlineView.make(withIdentifier: "DataCell", owner: self) as! NSTableCellView
             if let textField = view.textField {
                 textField.stringValue = ms.name
             }
@@ -144,7 +144,7 @@ extension MIDIEndpointViewController: NSOutlineViewDelegate {
             
         case let ms as MIDIDestination:
             print("viewForTableColumn endpoint \(ms)")
-            let view = outlineView.makeViewWithIdentifier("DataCell", owner: self) as! NSTableCellView
+            let view = outlineView.make(withIdentifier: "DataCell", owner: self) as! NSTableCellView
             if let textField = view.textField {
                 textField.stringValue = ms.name
             }
@@ -157,7 +157,7 @@ extension MIDIEndpointViewController: NSOutlineViewDelegate {
 
         case let srclist as MIDISourceList:
             print("viewForTableColumn MIDISourceList  \(srclist)")
-            let view = outlineView.makeViewWithIdentifier("HeaderCell", owner: self) as! NSTableCellView
+            let view = outlineView.make(withIdentifier: "HeaderCell", owner: self) as! NSTableCellView
             if let textField = view.textField {
                 textField.stringValue = srclist.name
             }
@@ -166,7 +166,7 @@ extension MIDIEndpointViewController: NSOutlineViewDelegate {
             
         case let dests as MIDIDestinationList:
             print("viewForTableColumn MIDIDestinationList  \(dests)")
-            let view = outlineView.makeViewWithIdentifier("HeaderCell", owner: self) as! NSTableCellView
+            let view = outlineView.make(withIdentifier: "HeaderCell", owner: self) as! NSTableCellView
             if let textField = view.textField {
                 textField.stringValue = dests.name
             }
@@ -180,10 +180,10 @@ extension MIDIEndpointViewController: NSOutlineViewDelegate {
         
     }
     
-    func outlineViewSelectionDidChange(notification: NSNotification){
+    func outlineViewSelectionDidChange(_ notification: Notification){
         
-        if let index = notification.object?.selectedRow {
-            if let object = notification.object?.itemAtRow(index) {
+        if let index = (notification.object as AnyObject).selectedRow {
+            if let object = (notification.object as AnyObject).item(atRow: index) {
                 if let s = object as? MIDISource {
                     print("selected Object is a MIDISource \(s.name)")
                 }
@@ -206,10 +206,10 @@ extension MIDIEndpointViewController: NSOutlineViewDelegate {
 
 extension MIDIEndpointViewController: NSOutlineViewDataSource {
     
-    func outlineView(outlineView: NSOutlineView, child index: Int, ofItem item: AnyObject?) -> AnyObject {
+    func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
         print("child:ofItem index \(index) item \(item)")
         
-        if let item: AnyObject = item {
+        if let item: AnyObject = item as AnyObject? {
             switch item {
             case let s as MIDISourceList:
                 print("child source list")
@@ -236,7 +236,7 @@ extension MIDIEndpointViewController: NSOutlineViewDataSource {
         }
     }
     
-    func outlineView(outlineView: NSOutlineView, isItemExpandable item: AnyObject) -> Bool {
+    func outlineView(_ outlineView: NSOutlineView, isItemExpandable item: Any) -> Bool {
         print("isItemExpandable \(item)")
         switch item {
         case let srclist as MIDISourceList:
@@ -251,9 +251,9 @@ extension MIDIEndpointViewController: NSOutlineViewDataSource {
 
     }
     
-    func outlineView(outlineView: NSOutlineView, numberOfChildrenOfItem item: AnyObject?) -> Int {
+    func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
         print("numberOfChildrenOfItem \(midiSourceList.sources.count) item \(item)")
-        if let item: AnyObject = item {
+        if let item: AnyObject = item as AnyObject? {
             switch item {
             case let srclist as MIDISourceList:
                 print("numberOfChildrenOfItem srclist")
@@ -274,7 +274,7 @@ extension MIDIEndpointViewController: NSOutlineViewDataSource {
 
     }
     
-    func outlineView(outlineView: NSOutlineView, isGroupItem item: AnyObject) -> Bool {
+    func outlineView(_ outlineView: NSOutlineView, isGroupItem item: Any) -> Bool {
         if item is MIDISourceList {
             return true
         }
